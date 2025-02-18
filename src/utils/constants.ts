@@ -1,0 +1,1 @@
+export const EXPIRY_DATE_IN_SECONDS = 300;

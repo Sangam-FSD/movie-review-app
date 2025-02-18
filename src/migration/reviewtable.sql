@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS reviews (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  movie_id INT,
+  FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE ON UPDATE CASCADE,
+   user_id INT,
+  rating INT NOT NULL CHECK (rating BETWEEN 1 AND 5),
+  review TEXT,
+);
