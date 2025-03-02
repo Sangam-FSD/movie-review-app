@@ -42,6 +42,8 @@ export async function updateReviewController(
         return;
       }
 
+      //tocheck ownership
+
       const isUserOwner = req.user?.id === toUpdateReview.user_id?.toString();
       if (!isUserOwner) {
         const unAuthorizedError = new unAuthorized();
